@@ -59,7 +59,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
 
-#DATABASE_URL = config('DATABASE_URL', default='sqlite:///db.sqlite3')
+DATABASE_URL = config('DATABASE_URL', default='sqlite:///db.sqlite3')
 
 DATABASES = {
     'default': {

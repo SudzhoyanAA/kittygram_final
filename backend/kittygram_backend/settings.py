@@ -1,7 +1,6 @@
 # flake8: noqa
 import os
 from pathlib import Path
-
 from decouple import config
 from dotenv import load_dotenv
 

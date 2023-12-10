@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'default')
 
 DEBUG = os.getenv('DEBUG', default=False)
-# Два дня бился над проблнмой с ALLOWED_HOSTS, при такой записи:
+# Два дня бился над проблемой с ALLOWED_HOSTS, при такой записи:
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split()
 # падал сервер, думал из-за чего такая проблема, но пока что не смог найти(
 ALLOWED_HOSTS = []

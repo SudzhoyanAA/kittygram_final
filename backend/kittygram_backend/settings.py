@@ -8,16 +8,16 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = os.getenv('SECRET_KEY', 'default')
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG', default=False)
 
 # Два дня бился над проблемой с ALLOWED_HOSTS, при такой записи:
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split()
 # падал сервер, думал из-за чего такая проблема, но пока что не смог найти(
 # такая же проблема и с SECRET_KEY. Отправляю пока так, но пытаюсь решить эту проблему(((
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split()
 
 INSTALLED_APPS = [
     'django.contrib.admin',

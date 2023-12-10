@@ -9,13 +9,10 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'default')
-# SECRET_KEY = os.getenv('SECRET_KEY', 'default') использовал такую запись
-# но тесты в гите выдавали ошибку, что SECRET_KEY не может быть пустым, хотя
-# образы пересобрал и файл .env на удаленном сервере обновил(((
 
 DEBUG = os.getenv('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['51.250.25.230', '127.0.0.1', 'localhost', 'kittygraam.ddns.net']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
